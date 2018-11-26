@@ -5,9 +5,9 @@
       :items="products" 
       :fields="fields" 
       :per-page="pageSize"
-      current-page="1"
-    ></b-table>
-   
+      :current-page="pageIndex">
+    </b-table>
+   <b-pagination align="center" size="md" :total-rows="products.length" v-model="pageIndex" :per-page="pageSize"></b-pagination>
   </div>
 </template>
 
@@ -20,6 +20,7 @@ export default {
       message:'Product List',
       products:[],
       pageSize :10,
+      pageIndex:1,
       fields: [ 
         {
           key:'id',
