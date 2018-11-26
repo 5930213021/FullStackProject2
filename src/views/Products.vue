@@ -1,7 +1,12 @@
   <template>
   <div>
     <h1>Product List</h1>
-    <b-table striped hover :items="products" :fields="fields"></b-table>
+    <b-table striped hover 
+      :items="products" 
+      :fields="fields" 
+      :per-page="pageSize"
+      current-page="1"
+    ></b-table>
    
   </div>
 </template>
@@ -14,7 +19,22 @@ export default {
     return{
       message:'Product List',
       products:[],
-      fields: [ 'id', 'title', 'price' ]
+      pageSize :10,
+      fields: [ 
+        {
+          key:'id',
+          sortable:true
+        },
+        {
+          key:'title',
+          sortable:true
+        },
+        {
+          key:'price',
+          sortable:true,
+          variant:'info'
+        },
+      ]
     }
   },
   mounted() {
