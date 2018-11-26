@@ -1,7 +1,7 @@
   <template>
   <div>
     <h1>Product List</h1>
-    <!-- <HelloWorld :msg="message"></HelloWorld> -->
+    <b-table striped hover :items="products" :fields="fields"></b-table>
    
   </div>
 </template>
@@ -12,14 +12,18 @@ export default {
     name: 'products',
   data(){
     return{
-      message:'Product List'
+      message:'Product List',
+      products:[],
+      fields: [ 'id', 'title', 'price' ]
     }
   },
-   mounted () {
-    axios
+  mounted() {
+    var instace = this
+     axios
       .get('https://shielded-spire-43023.herokuapp.com/api/products')
       .then(function(respone){
         console.log(respone.data)
+        instace.products = respone.data.data
       })
   }
 }
