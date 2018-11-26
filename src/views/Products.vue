@@ -1,7 +1,7 @@
   <template>
   <div>
     <h1>Product List</h1>
-    <HelloWorld :msg="message"></HelloWorld>
+    <!-- <HelloWorld :msg="message"></HelloWorld> -->
    
   </div>
 </template>
