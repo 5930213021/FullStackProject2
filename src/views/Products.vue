@@ -16,7 +16,28 @@ import axios from 'axios'
 export default {
     name: 'products',
   data(){
-    
+    return{
+      message:'Product List',
+      products:[],
+      pageSize :10,
+      pageIndex:1,
+      fields: [ 
+        {
+          key:'id',
+          sortable:true
+        },
+        {
+          key:'title',
+          sortable:true
+        },
+        {
+          key:'price',
+          sortable:true,
+          variant:'info'
+        },
+      ]
+    }
+  },
   mounted() {
     var instace = this
      axios
