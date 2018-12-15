@@ -63,7 +63,7 @@ export default {
         {
           key:'product_name',
           sortable:true,
-          variant:'wonder'
+          variant:'Warning'
         },
         {
           key:'unit_price',
