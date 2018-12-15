@@ -4,9 +4,12 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import "chart.js"
+import "hchs-vue-charts"
 
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false
+Vue.use(window.VueCharts)
 
 new Vue({
   router,
