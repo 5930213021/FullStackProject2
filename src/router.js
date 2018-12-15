@@ -25,11 +25,6 @@ export default new Router({
       path: '/products',
       name: 'product',
       component: Products
-    },
-    {
-      path: '/users',
-      name: 'user',
-      component: Users
     }
   ]
 })
