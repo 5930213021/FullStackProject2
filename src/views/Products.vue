@@ -3,8 +3,9 @@
     <h1>Product List</h1>
 
   <b-row>
+    
       <b-col md="6" class="my-1">
-        <b-form-group horizontal label="Filter" class="mb-0">
+        <b-form-group horizontal class="mb-0">
           <b-input-group>
             <b-form-input v-model="filter" placeholder="Type to Search" />
             <b-input-group-append>
@@ -62,8 +63,7 @@ export default {
         },
         {
           key:'product_name',
-          sortable:true,
-          variant:'Warning'
+          sortable:true
         },
         {
           key:'unit_price',
