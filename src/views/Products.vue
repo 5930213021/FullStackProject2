@@ -43,11 +43,11 @@ export default {
           sortable:true
         },
         {
-          key:'title',
+          key:'product_name',
           sortable:true
         },
         {
-          key:'price',
+          key:'unit_price',
           sortable:true,
           variant:'info'
         },
