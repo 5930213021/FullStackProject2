@@ -65,7 +65,7 @@ export default {
   mounted() {
     var instace = this
      axios
-      .get('https://boiling-spire-19285.herokuapp.com/api/products')
+      .get('https://shielded-ridge-17839.herokuapp.com/api/products')
       .then(function(respone){
         console.log(respone.data)
         instace.products = respone.data.data
