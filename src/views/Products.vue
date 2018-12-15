@@ -23,6 +23,9 @@
       :current-page="pageIndex">
     </b-table>
    <b-pagination align="center" size="md" :total-rows="products.length" v-model="pageIndex" :per-page="pageSize"></b-pagination>
+
+
+   
   </div>
 </template>
 
